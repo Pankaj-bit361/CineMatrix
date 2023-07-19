@@ -1,0 +1,67 @@
+.flex {
+    display: flex;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #2b3149; /* Dark background color */
+    color: #fff; /* White text color */
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Logo Section */
+.flex-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Search Section */
+.flex-search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.flex-search input {
+    padding: 6px; /* Adjust the height by changing this value */
+    height: 24px; /* Adjust the height by changing this value */
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+}
+.logo{
+    color:#fff;
+    text-decoration: none;
+
+}
+.flex-search button {
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f02f57; /* Red background for the button */
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Content Section */
+.flex-content {
+    display: flex;
+    align-items: center;
+}
+
+.flex-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.flex-content a:hover {
+    background-color: #f02f57; /* Red background on hover */
+    border-radius: 4px;
+}
