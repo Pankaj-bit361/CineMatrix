@@ -8,9 +8,19 @@
     </div>
     <div class="flex-content-parent">
     <div class="flex-content">
+        <div *ngIf="isLoggedIn">
+            <a>{{data[1].username}}</a>
+        </div>
         <a routerLink="/">Home</a>
         <a routerLink="/">Cart</a>
-        <a routerLink="/login">Login</a>
+        
+        <div *ngIf="isLoggedIn else notLoggedInBlock">
+            <a (click)="logout()">Logout</a>
+        </div>
+        <ng-template #notLoggedInBlock>
+            <a routerLink="/login">Login</a>
+          </ng-template>
+       
     </div>
 </div>
 </div>

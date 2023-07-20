@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MovieData } from '../home/home.component';
+import { ApiService } from '../api.service';
+
+// Define the new interface for movie details
+
 
 @Component({
   selector: 'app-single',
@@ -7,12 +12,19 @@ import { MovieData } from '../home/home.component';
   styleUrls: ['./single.component.css']
 })
 export class SingleComponent {
+  data!: MovieData; // Use non-null assertion operator
 
-ngOnInit(){
- 
-}
-getdata(data:MovieData){
-console.log(data,"onSingleProduct Page")
-}
 
+
+  constructor(private route: ActivatedRoute, private apiservice: ApiService) { }
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.apiservice.fetchSingleData(id).subscribe((res) => {
+        this.data = res[0];
+        console.log(this.data,this.data.img);
+      });
+    });
+  }
 }

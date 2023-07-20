@@ -15,13 +15,14 @@ export class LoginComponent {
 
   constructor(private apiService: ApiService,private router:Router) {}
 
-  login() {
+  login2() {
     const loginData = {
       email: this.email,
       password: this.password
     };
 
-    this.apiService.loginUser(loginData).subscribe(response => {
+    this.apiService.login(loginData).subscribe(response => {
+      this.apiService.ok()
       localStorage.setItem("user",JSON.stringify(response))
       if(response[0]=="Login Successful"){
         alert(response[0])

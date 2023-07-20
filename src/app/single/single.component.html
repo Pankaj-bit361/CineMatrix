@@ -1,1 +1,45 @@
-<p>single works!</p>
+<div>
+    <!-- Display the background image using img2 property -->
+    <div class="main">
+        <div class="inner-main">
+            <div class="img-container">
+                <img [src]="data.img2"/>
+            </div>
+            <div class="content">
+            <h2>{{ data.title }}</h2>
+            <div  class="rating">
+            <p>&bigstar;{{ data.rating  }} </p>
+            <p>{{data.likes}} votes</p>
+          </div>
+          <div class="addRating">
+            <div>
+              <p>Add your rating & review</p>
+              <p>Your ratings matter</p>
+            </div>
+            <div class="btn">
+              <button>Rate now</button>
+            </div>
+          </div>
+          <div class="print">
+          <span class="print1">{{ data.print }}</span></div>
+          <div class="language">
+          <span class="language1"> {{ data.language }}</span></div>
+          <div class="rating1">
+            <p> {{ data.duration }}</p>
+            <p>•&nbsp;&nbsp;{{ data.genre }}</p>
+          </div>
+           
+           
+           <button class="btn2">Book Now</button>
+            
+        </div>
+          </div>
+    <div class="background" [ngStyle]="{ 'background-image': 'url(' + data.img + ')' }">
+      <!-- Display the data information inside the div -->
+     
+    </div>
+</div>
+<p id="about">About the movie</p>
+<p id="aboutcontent">{{data.about}}</p>
+  </div>
+  

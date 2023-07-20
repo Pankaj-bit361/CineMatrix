@@ -23,7 +23,7 @@ const routes: Routes = [
    },
    {
     component:SingleComponent,
-    path:"single"
+    path:"single/:id"
    }
 ];
 

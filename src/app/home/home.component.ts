@@ -44,7 +44,8 @@ ngOnInit(){
 
 movieclick(data:MovieData){
   console.log(data)
-  this.router.navigate(["/single"])
+
+  this.router.navigate(["/single",data._id])
 }
 
 }

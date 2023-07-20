@@ -29,11 +29,11 @@
   
 
       
-    <carousel>
+    <carousel [noPause]="false" >
         <slide>
             <div class="main-1" id="flex-image">
-                <div *ngFor="let i of movies" >
-                 <img [src]="i.img2"/>
+                <div *ngFor="let i of movies" let index="index">
+                 <img (click)="movieclick(i)" [src]="i.img2"/>
                 </div>
                
              </div>
@@ -41,10 +41,10 @@
         <slide>
             <div class="main-1" id="flex-image" >
                 <div *ngFor="let i of movies2" >
-                    <div (click)="movieclick(i)">
-                 <img [src]="i.img2"/>
+                    
+                 <img (click)="movieclick(i)" [src]="i.img2"/>
                 
-                </div>
+               
                 </div>
                
              </div>
@@ -180,5 +180,5 @@
         </slide>
     </carousel>
 </div>
-<app-footer></app-footer>
+
 </div>
