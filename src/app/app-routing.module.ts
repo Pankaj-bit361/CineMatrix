@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SingleComponent } from './single/single.component';
+import { CinemaComponent } from './cinema/cinema.component';
+import { SeatsComponent } from './seats/seats.component';
 
 const routes: Routes = [
   {
@@ -24,7 +26,15 @@ const routes: Routes = [
    {
     component:SingleComponent,
     path:"single/:id"
-   }
+   },
+   {
+    component:CinemaComponent,
+    path:"cinema/:title"
+   },
+  {
+    component:SeatsComponent,
+    path:"seats"
+  }
 ];
 
 @NgModule({

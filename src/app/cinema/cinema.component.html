@@ -1,0 +1,124 @@
+<div class="ok">
+
+
+    <div id="navbar-componant">
+        <div id="navbar-1">
+            <p>Movies</p>
+            <p>stream</p>
+            <p>Events</p>
+            <p>Play</p>
+            <p>Sports</p>
+            <p>Activites</p>
+            <p>Buzz</p>
+        </div>
+        <div id="navbar-2">
+            <p>LiveShows</p>
+            <p>Coporates</p>
+            <p>Offer</p>
+            <p>Gift Cards</p>
+        </div>
+    </div>
+    <div id="title">
+        <h2>{{MovieName}}</h2>
+    </div>
+
+    <div class="main-content">
+        <div class="content-1">
+            <div class="content-2" id="hello">
+                <p>SAT</p>
+                <p>22</p>
+                <p>JULY</p>
+            </div>
+            <div class="content-2">
+
+                <p>SUN</p>
+                <p>23</p>
+                <p>JULY</p>
+            </div>
+            <div class="content-2">
+                <p>MON</p>
+                <p>24</p>
+                <p>JULY</p>
+            </div>
+            <div class="content-2">
+                <p>TUE</p>
+                <p>25</p>
+                <p>JULY</p>
+            </div>
+            <div class="content-2">
+                <p>WED</p>
+                <p>26</p>
+                <p>JULY</p>
+            </div>
+        </div>
+        <div class="innerContent">
+            <select class="innerContent1" (change)="getChange($event)">
+                <option value="">Select Location</option>
+                <option value="Delhi NCR">Delhi-Ncr</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="TamilNadu">TamilNadu</option>
+                <option value="Bhopal">Bhopal</option>
+
+            </select>
+            <select class="innerContent2">
+                <option>Filter Price Range</option>
+                <option>0-100</option>
+                <option>101-200</option>
+
+            </select>
+            <select class="innerContent3">
+                <option>Filter Show Timings</option>
+                <option>Morning</option>
+                <option>AfterNoon</option>
+                <option>Evening</option>
+            </select>
+        </div>
+    </div>
+    <div class="display-main">
+        <div class="flex-1">
+            <p class="dot-1">•</p>
+            <p>AVAILABLE</p>
+            <p class="dot-2">•</p>
+            <p>FAST FILLING</p>
+            <p class="dot-3">•</p>
+            <p>SUBTITLES LANGUAGE</p>
+
+        </div>
+        <hr />
+        <div>
+            <div *ngFor="let i of data">
+                <div class="movie-main">
+                    <div class="movie-main-1">
+                       
+                        <span class="heart">&#9825;</span>
+                      
+                        <div class="heart-content">
+                            <p class="cinemaname">{{i.cinemaName}}</p>
+                            <div class="bev">
+                                <i class="bi bi-cup-straw"></i>
+                                <p>Food & Beverages</p>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="bi bi-info-circle">Info</i>
+                        </div>
+                    </div>
+
+                <div class="time">
+                    <div class="button" (click)="seat()">
+                    <p>{{i.time[0]}}</p>
+                </div>
+                    <div (click)="seat()" class="button">
+                    <p>{{i.time[1]}}</p></div>
+                    <div (click)="seat()" class="button">
+                    <p>{{i.time[2]}}</p></div>
+                </div>
+
+
+            </div>
+            <hr/>
+        </div>
+    </div>
+</div>

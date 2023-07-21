@@ -49,4 +49,11 @@ export class ApiService {
   fetchSingleData(id: any): Observable<any> {
     return this.http.get<any>(`http://127.0.0.1:3002/GetMovies/${id}`);
   }
+
+fetchcinemaData(name:any,location:any):Observable<any>{
+  return this.http.get<any>(`http://127.0.0.1:3002/movie/${name}?location=${location}`)
+}
+fetchlocationData(name:string,location:string):Observable<any>{
+  return this.http.get<any>(`http://127.0.0.1:3002/getLocation/${name}?location=${location}`)
+}
 }

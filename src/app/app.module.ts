@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FooterComponent } from './footer/footer.component';
 import { SingleComponent } from './single/single.component';
+import { CinemaComponent } from './cinema/cinema.component';
+import { SeatsComponent } from './seats/seats.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SingleComponent } from './single/single.component';
     SignupComponent,
     HomeComponent,
     FooterComponent,
-    SingleComponent
+    SingleComponent,
+    CinemaComponent,
+    SeatsComponent
   ],
   imports: [
     BrowserModule,

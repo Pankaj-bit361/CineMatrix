@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovieData } from '../home/home.component';
 import { ApiService } from '../api.service';
 
@@ -16,7 +16,7 @@ export class SingleComponent {
 
 
 
-  constructor(private route: ActivatedRoute, private apiservice: ApiService) { }
+  constructor(private route: ActivatedRoute, private apiservice: ApiService,private router:Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -27,4 +27,9 @@ export class SingleComponent {
       });
     });
   }
+
+handlecinema(){
+  this.router.navigate(["/cinema",this.data.title])
+}
+
 }

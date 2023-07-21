@@ -15,6 +15,8 @@ export interface MovieData{
   likes:string
   rating:string
   img2:string
+  cinemaName:string
+  time:string
 }
 
 
