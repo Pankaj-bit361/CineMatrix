@@ -19,6 +19,7 @@ GoToHome(){
     showConfirmButton: false,
     timer: 1500
   })
+  localStorage.removeItem("paymentData")
   this.router.navigate(["/"])
 }
 

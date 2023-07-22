@@ -19,7 +19,7 @@ export class ApiService {
   }
 
   login(loginData: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3002/login', loginData)
+    return this.http.post<any>('https://matrix-mabh.onrender.com/login', loginData)
       .pipe(
         tap(() => {
           this.isLoggedInSubject.next(true);
@@ -46,26 +46,26 @@ export class ApiService {
   }
 
   SignupDo(SignupData: SignupFrom): Observable<SignupFrom> {
-    return this.http.post<SignupFrom>('http://localhost:3002/Signup', SignupData);
+    return this.http.post<SignupFrom>('https://matrix-mabh.onrender.com/Signup', SignupData);
   }
 
   fetchMovies(): Observable<any> {
-    return this.http.get<any>('http://127.0.0.1:3002/GetMovies');
+    return this.http.get<any>('https://matrix-mabh.onrender.com/GetMovies');
   }
 
   fetchSingleData(id: any): Observable<any> {
-    return this.http.get<any>(`http://127.0.0.1:3002/GetMovies/${id}`);
+    return this.http.get<any>(`https://matrix-mabh.onrender.com/GetMovies/${id}`);
   }
 
 fetchcinemaData(name:any,location:any):Observable<any>{
-  return this.http.get<any>(`http://127.0.0.1:3002/movie/${name}?location=${location}`)
+  return this.http.get<any>(`https://matrix-mabh.onrender.com/movie/${name}?location=${location}`)
 }
 fetchlocationData(name:string,location:string):Observable<any>{
-  return this.http.get<any>(`http://127.0.0.1:3002/getLocation/${name}?location=${location}`)
+  return this.http.get<any>(`https://matrix-mabh.onrender.com/getLocation/${name}?location=${location}`)
 }
 
 patchprofileData(id:any,ob:object):Observable<any>{
-  return this.http.patch<any>(`http://localhost:3002/Signup/${id}`,ob)
+  return this.http.patch<any>(`https://matrix-mabh.onrender.com/Signup/${id}`,ob)
 }
 
 }
