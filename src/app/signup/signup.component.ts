@@ -25,15 +25,7 @@ export class SignupComponent {
   
 
   teleport(){
-    console.log("hello")
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Account Created Successfulluy',
-      showConfirmButton: false,
-      timer: 1500
-    })
-    this.router.navigate(["/login"])
+   
      }
     
   SignupUser(){
@@ -45,7 +37,15 @@ export class SignupComponent {
 
 
 this.apiservice.SignupDo(Signupdata).subscribe((res)=>{
-  console.log(res)
+  console.log("hello")
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Account Created Successfulluy',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    this.router.navigate(["/login"])
 
 })
 
