@@ -14,6 +14,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SingleComponent } from './single/single.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { SeatsComponent } from './seats/seats.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PaymentComponent } from './payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +30,18 @@ import { SeatsComponent } from './seats/seats.component';
     FooterComponent,
     SingleComponent,
     CinemaComponent,
-    SeatsComponent
+    SeatsComponent,
+    ProfileComponent,
+    CheckoutComponent,
+    PaymentComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    SweetAlert2Module.forRoot(),
     CarouselModule.forRoot()
     
   ],

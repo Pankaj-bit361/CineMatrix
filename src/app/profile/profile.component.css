@@ -1,0 +1,97 @@
+#main-1{
+    background: whitesmoke;
+    padding-bottom: 5%;
+}
+#main{
+    width:50%;
+    margin: auto;
+    letter-spacing: 1px;
+   
+}
+.profile-1{
+    background-color: white;
+    padding-bottom: 5%;
+}
+
+.hello{
+    border: 1px solid black;
+    color:white;
+    background-color: #7c3d53;
+    height: 10vh;
+    background-image: linear-gradient(to right, #2b3148,#52374d,#954156,#e24c61);
+}
+.hello>p{
+    font-size: 20px;
+   
+    margin-top: 3%;
+    font-weight: 600;
+    margin-left: 8%;
+}
+#account{
+    margin-top: 2%;
+    margin-left: 8%;
+    font-size: 18px;
+    font-weight: 600;
+  
+}
+.flex1{
+    display: flex;
+    gap: 10%;
+    margin-left: 8%;
+
+}
+.flex1{
+    display: flex;
+    gap: 15%;
+    margin-left: 8%;
+
+}
+.flex1 :nth-child(2){
+    border-radius: 10px;
+    height: 5vh;
+    width:30%
+
+}
+
+
+
+.flex2{
+    display: flex;
+    gap: 10%;
+    margin-left: 8%;
+
+}
+.flex2{
+    display: flex;
+    gap: 15%;
+    margin-left: 8%;
+
+}
+.flex2 :nth-child(2){
+  border-radius: 10px;
+  height: 5vh;
+
+}
+.flex2 :nth-child(1){
+    border-radius: 10px;
+    height: 5vh;
+    width:30%
+  
+  }
+
+  .flex2 input{
+    width: 30%;
+  }
+  .flex2 select{
+    width: 30%;
+  }
+
+  button{
+    width: 15%;
+    margin-left: 42.5%;
+    margin-top: 8%;
+    border-radius: 10px;
+    background-color: #f02f57;
+    color: white;
+    border: none;
+  }

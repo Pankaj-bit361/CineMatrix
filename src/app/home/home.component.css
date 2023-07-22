@@ -1,3 +1,7 @@
+
+#wow{
+    margin-bottom: 5%;
+}
 .main-1{
  display: grid;
  width:90%;
@@ -5,6 +9,7 @@ grid-template-columns: repeat(5,1fr);
  gap:3%;
  margin: auto;
  margin-top: 2%;
+
 }
 .main-1 img{
     width:100%;

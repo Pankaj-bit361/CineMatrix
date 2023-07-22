@@ -1,0 +1,43 @@
+<div id="main-1">
+<div id="main">
+    <div class="profile-1">
+        <div class="hello"><p>Hi,{{data[1].username}}</p></div>
+        <p id="account">Account Details</p>
+        <div class="flex2">
+            <p>Email Address</p>
+            <p>{{data[1].email}}</p>
+           
+        </div>
+        <div class="flex2">
+            <p>Plan Type</p>
+            <select [value]="data[1].plans" (change)="onSelectChange($event)">
+                <option value="">select the plan</option>
+                <option value="Premium">Premium</option>
+                <option value="Gold">Gold</option>
+                <option value="Regular">Regular</option>
+            </select>
+            
+        </div>
+        
+       
+    </div>
+
+    <div class="profile-1">
+        <form (ngSubmit)="onformsubmit()">
+        <p id="account">Account Details</p>
+        <div class="flex2">
+            <p>UserName</p>
+            <input name="val1" [(ngModel)]="val1" [value]="data[1].username"/>
+           
+        </div>
+        <div class="flex2">
+            <p>DOB</p>
+            <input name="val2" [(ngModel)]="val2" type="date"/>
+            
+        </div>
+        <button type="submit">Save</button>
+        
+    </form>
+    </div>
+</div>
+</div>

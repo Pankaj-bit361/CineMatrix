@@ -1,4 +1,4 @@
-<div><div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="wow"><div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -29,7 +29,7 @@
   
 
       
-    <carousel [noPause]="false" >
+    <carousel [noPause]="false" [isAnimated]="true" >
         <slide>
             <div class="main-1" id="flex-image">
                 <div *ngFor="let i of movies" let index="index">
@@ -57,7 +57,7 @@
 
 <div id="slide2">
     <h4>The Best of Live Events</h4>
-    <carousel>
+    <carousel [isAnimated]="true">
         <slide>
             <div class="main-1">
             <img  src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NzArIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/workshop-and-more-web-collection-202211140440.png"/>
@@ -109,7 +109,7 @@
   
 <div id="slide2">
     <h4>Events Happening Near You</h4>
-    <carousel>
+    <carousel [isAnimated]="true">
         <slide>
             <div class="main-1">
             <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyOSBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363441-uqhptykvte-portrait.jpg"/>
@@ -134,7 +134,7 @@
 
 <div id="slide2">
     <h4>Online Streaming Events</h4>
-    <carousel>
+    <carousel [isAnimated]="true">
         <slide>
             <div class="main-1">
             <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyOCBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358276-vjdwsfbydg-portrait.jpg"/>
@@ -159,7 +159,7 @@
 
 <div id="slide2">
     <h4>Explore Fun Activities</h4>
-    <carousel>
+    <carousel [isAnimated]="true"> 
         <slide>
             <div class="main-1">
             <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-VGh1LCAyMCBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00359108-pzmscndkvf-portrait.jpg"/>

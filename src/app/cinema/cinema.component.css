@@ -35,6 +35,7 @@
 }
 .ok{
     background-color:whitesmoke ;
+    padding-bottom: 5%;
 }
 .main-content{
     display: flex;

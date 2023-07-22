@@ -1,3 +1,5 @@
+
+
 <div class="flex">
     <div class="flex-logo">
         <a class="logo" routerLink="/">The Matrix</a>
@@ -9,10 +11,10 @@
     <div class="flex-content-parent">
     <div class="flex-content">
         <div *ngIf="isLoggedIn">
-            <a>{{data[1].username}}</a>
+            <a routerLink="/profile">{{data[1].username}}</a>
         </div>
         <a routerLink="/">Home</a>
-        <a routerLink="/">Cart</a>
+        <a routerLink="/checkout">Cart</a>
         
         <div *ngIf="isLoggedIn else notLoggedInBlock">
             <a (click)="logout()">Logout</a>

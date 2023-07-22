@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 export interface SignupFrom{
   username:string
@@ -25,6 +26,13 @@ export class SignupComponent {
 
   teleport(){
     console.log("hello")
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Account Created Successfulluy',
+      showConfirmButton: false,
+      timer: 1500
+    })
     this.router.navigate(["/login"])
      }
     

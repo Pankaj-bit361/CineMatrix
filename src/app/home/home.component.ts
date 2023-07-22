@@ -17,6 +17,7 @@ export interface MovieData{
   img2:string
   cinemaName:string
   time:string
+  location:string
 }
 
 

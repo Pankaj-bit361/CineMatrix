@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -25,8 +26,22 @@ export class LoginComponent {
       this.apiService.ok()
       localStorage.setItem("user",JSON.stringify(response))
       if(response[0]=="Login Successful"){
-        alert(response[0])
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: response[0],
+          showConfirmButton: false,
+          timer: 1500
+        })
+
         this.router.navigate(["/"])
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: response[0],
+          
+        })
       }
     
       console.log(response);

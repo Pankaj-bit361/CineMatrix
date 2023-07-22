@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { SignupFrom } from './signup/signup.component';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -18,11 +19,17 @@ export class ApiService {
   }
 
   login(loginData: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3002/login', loginData);
+    return this.http.post<any>('http://localhost:3002/login', loginData)
+      .pipe(
+        tap(() => {
+          this.isLoggedInSubject.next(true);
+        })
+      );
   }
- ok(){
-  this.isLoggedInSubject.next(true);
- }
+  
+  ok() {
+    this.isLoggedInSubject.next(true);
+  }
   logout() {
    
     localStorage.removeItem('user');
@@ -56,4 +63,9 @@ fetchcinemaData(name:any,location:any):Observable<any>{
 fetchlocationData(name:string,location:string):Observable<any>{
   return this.http.get<any>(`http://127.0.0.1:3002/getLocation/${name}?location=${location}`)
 }
+
+patchprofileData(id:any,ob:object):Observable<any>{
+  return this.http.patch<any>(`http://localhost:3002/Signup/${id}`,ob)
+}
+
 }

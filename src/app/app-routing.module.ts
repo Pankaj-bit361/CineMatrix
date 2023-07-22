@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { SingleComponent } from './single/single.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { SeatsComponent } from './seats/seats.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -34,6 +37,18 @@ const routes: Routes = [
   {
     component:SeatsComponent,
     path:"seats"
+  },
+  {
+    component:ProfileComponent,
+    path:"profile"
+  },
+  {
+    component:CheckoutComponent,
+    path:"checkout"
+  },
+  {
+    component:PaymentComponent,
+    path:"payment"
   }
 ];
 
